@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/mbworks/static/css/main.3713ab59.chunk.css",
+    "main.js": "/mbworks/static/js/main.0a6a7bc1.chunk.js",
+    "main.js.map": "/mbworks/static/js/main.0a6a7bc1.chunk.js.map",
+    "runtime~main.js": "/mbworks/static/js/runtime~main.b09cdc11.js",
+    "runtime~main.js.map": "/mbworks/static/js/runtime~main.b09cdc11.js.map",
+    "static/js/2.4a24541e.chunk.js": "/mbworks/static/js/2.4a24541e.chunk.js",
+    "static/js/2.4a24541e.chunk.js.map": "/mbworks/static/js/2.4a24541e.chunk.js.map",
+    "index.html": "/mbworks/index.html",
+    "precache-manifest.f95301a308fd00e7ab2f4470a36715d5.js": "/mbworks/precache-manifest.f95301a308fd00e7ab2f4470a36715d5.js",
+    "service-worker.js": "/mbworks/service-worker.js",
+    "static/css/main.3713ab59.chunk.css.map": "/mbworks/static/css/main.3713ab59.chunk.css.map",
+    "static/media/cert_analitics.jpg": "/mbworks/static/media/cert_analitics.594c8281.jpg",
+    "static/media/cert_css.jpg": "/mbworks/static/media/cert_css.f2afc251.jpg",
+    "static/media/cert_hackeru.jpg": "/mbworks/static/media/cert_hackeru.88102052.jpg",
+    "static/media/cert_html.jpg": "/mbworks/static/media/cert_html.a4bda59c.jpg",
+    "static/media/cert_java.jpg": "/mbworks/static/media/cert_java.713009ef.jpg",
+    "static/media/cert_jquery.jpg": "/mbworks/static/media/cert_jquery.6b9fbd0f.jpg",
+    "static/media/cert_js.jpg": "/mbworks/static/media/cert_js.d1851d54.jpg",
+    "static/media/cert_node_js.png": "/mbworks/static/media/cert_node_js.b18f5efd.png",
+    "static/media/cert_sql.jpg": "/mbworks/static/media/cert_sql.aa66bfd1.jpg",
+    "static/media/certificate_elements_of_ai.png": "/mbworks/static/media/certificate_elements_of_ai.5a26ace8.png",
+    "static/media/ds_logo.png": "/mbworks/static/media/ds_logo.bdf2cdd5.png",
+    "static/media/Jambotron.css": "/mbworks/static/media/header-bg.45fffff3.jpg",
+    "static/media/highschool.jpg": "/mbworks/static/media/highschool.f6b1aeca.jpg",
+    "static/media/ibm_hackaton.jpeg": "/mbworks/static/media/ibm_hackaton.a8e5b388.jpeg",
+    "static/media/karma_logo.png": "/mbworks/static/media/karma_logo.1bae0e46.png",
+    "static/media/linkedin_icon.png": "/mbworks/static/media/linkedin_icon.f52c24cb.png",
+    "static/media/telegram_icon.png": "/mbworks/static/media/telegram_icon.566cf29c.png",
+    "static/media/weekup_logo.jpg": "/mbworks/static/media/weekup_logo.aa10612a.jpg"
+  }
+}
