@@ -1,0 +1,25 @@
+li{
+    list-style-type: none;
+}
+
+.leftCol{
+    margin-top: 2%;
+    margin-right: 5%;
+    font-size: 1.4em;
+    background-color: aliceblue;
+    text-align: left;
+}
+
+.rightCol{
+    margin-top: 2%;
+    margin-left: 15%;
+    font-size: 1.4em;
+    background-color: bisque;
+    text-align: right;
+}
+
+.blogItemTitle{
+    font-size: 1.6em;
+    font-weight: bold;
+    font-style: italic;
+}
