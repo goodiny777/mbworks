@@ -11,7 +11,7 @@ import gitIco from '../assets/icons/git.png';
 
 function Home() {
   return (
-    <div>
+    <div className="bg-dark">
     <Navbar/>
     <Jambotrone/>
       <div className="container">

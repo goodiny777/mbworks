@@ -19,7 +19,7 @@ import cert_analitics from '../assets/certificates/cert_analitics.jpg';
 
 function Certificates(){
   return(
-    <div>
+    <div className="bg-dark">
       <Navbar/>
         <div className="container">
           <div className="row">

@@ -24,12 +24,12 @@ function Navbar() {
                  </Link>
               </li>
 
-              {/* <li className="nav-item">
+              <li className="nav-item">
                 <Link className="nav-link" to="/blog">
                 <img alt="no-img" className="nb-img fluid ms-auto" src={blog_icon}/>
                  Blog <span className="sr-only">(current)</span>
                  </Link>
-              </li> */}
+              </li>
 
               <li className="nav-item">
                 <Link className="nav-link" to="/works">

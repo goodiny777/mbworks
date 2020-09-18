@@ -45,7 +45,7 @@ class Blog extends React.Component{
         return <div>Loading...</div>;
       } else {
           return(
-              <div>
+              <div className="bg-dark">
                   <Navbar/>
                   <ul>
                     { items.sort(compare).map(function(object){

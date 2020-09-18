@@ -8,7 +8,7 @@ import weekupLogo from '../assets/weekup_logo.jpg';
 
 function Works(){
   return(
-    <div>
+    <div className="bg-dark">
       <Navbar/>
       <div className="container rounded bg-light">
           <div className="row container">
