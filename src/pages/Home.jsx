@@ -15,7 +15,7 @@ function Home() {
     <Navbar/>
     <Jambotrone/>
       <div className="container">
-        <p>
+        <p className="color-white">
           Hey! I'm <strong>Michael</strong>. Coding has changed my world. It's not just
           about apps.
           Learning to code gave me <i>problem-solving skills </i>
@@ -30,18 +30,18 @@ function Home() {
           You welcome to ask me for anything and I will try to give you the best answer
           that I can.
         </p>
-        <p>
+        <p className="color-white">
           From August 2019 till today I work at <a href="https://www.bigapps.co.il/">Bigapps Interactive</a> as Mobile developer and take part in developing Android and iOS native apps.
           <br/>
           Also I took part in developing crosplatform app with Native Script and Angular 2.
         </p>
-        <p>
+        <p className="color-white">
           This site is an example of my knowledge in React buildng and Bootstrap 4.
           It is hosted on GitHub Pages and uses a free domain name from Freenom.
         </p>
       </div>
       <div className="wrapper">
-        <p className="mrg">You can find me on</p>
+        <p className="mrg color-white">You can find me on</p>
           <div className="row link-list">
           <div className="col">
             <a href="https://www.sololearn.com/Profile/4761008" target="_blank">
@@ -69,7 +69,7 @@ function Home() {
             </a>
           </div>
           </div>
-      <p className="mrg">or just</p>
+      <p className="mrg color-white">or just</p>
       <button type="button"  className="btn btn-primary mrg" onClick={sendMail}>Mail me</button>
       </div>
     <Footer/>
