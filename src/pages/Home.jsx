@@ -22,7 +22,7 @@ function Home() {
           and a way to communicate with others on a technical level.
           I can also develop websites and use my coding skills to get a better job.
           I learned a basic level of my skills at <strong>leZion beRina</strong> high
-          scoll in Naale programm and
+          scholl in Naale program and
           at <a href="https://www.sololearn.com/Profile/4761008">SoloLearn</a>.
           Then I improved them to advanced level at <strong> HackerU </strong>
           where I'm learnig today with a great teacher

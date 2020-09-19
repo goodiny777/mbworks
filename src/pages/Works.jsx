@@ -23,9 +23,8 @@ function Works(){
               <div className="row container">
                 <p>
                 Weekup I made as freelancer.<br/>
-                In this project I managed all the tecnology side.
-                I took a little longer than I expected to move this project to production,<br/>
-                but finaly it available in GooglePlay and alredy starts to 
+                In this project I managed all the tecnology side.<br/>
+                From choosing data base and libraries to rulling worktime and supplying th customer with techncal advices.
                 </p>
             </div>
           </div>
@@ -64,8 +63,9 @@ function Works(){
               </div>
               <div className="row container">
                 <p>
-                Project for my friend's buisness<br />It is simple web view but allow him(my friend) to reach his clients<br/>
-                by sending to them push notifications 
+                Project for my friend's buisness<br />It is simple web view but makes simple my customer to reach his clients<br/>
+                by sending to them push notifications.<br/>
+                Also it is good stategy to put your buisness page or app to be always in eyes of customers. 
                 </p>
               </div>
             </div>
