@@ -1,3 +1,38 @@
 .row{
-  padding-top: 10px
+  padding-top: 10px;
+}
+
+.root {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  overflow: hidden;
+}
+
+.gridList {
+  width: 70%;
+  height: 100%;
+}
+
+.image-cert{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.display{
+  display: inline;
+}
+
+.hidden{
+  display: none;
+}
+
+.dialog-image{
+  height: 100%;
+  width: 100%;
+  align-self: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

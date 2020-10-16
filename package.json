@@ -4,13 +4,16 @@
   "private": true,
   "homepage": "http://goodiny777.github.io/mbworks",
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
     "firebase": "^7.21.0",
     "mobiscroll": "^3.0.0-beta6",
     "mobiscroll-react": "^4.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-redux": "^7.2.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.0.0"
+    "react-scripts": "3.0.0",
+    "redux": "^4.0.5"
   },
   "scripts": {
     "start": "react-scripts start",

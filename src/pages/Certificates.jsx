@@ -1,7 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "./Certificates.css";
+import firebase from '../Firebase';
 import Navbar from '../components/Navbar.jsx';
 import Footer from '../components/Footer.jsx';
+import GridList from '@material-ui/core/GridList';
+import GridListTile from '@material-ui/core/GridListTile';
+import GridListTileBar from '@material-ui/core/GridListTileBar';
+import Button from '@material-ui/core/Button';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 import cert_html from '../assets/certificates/cert_html.jpg';
 import cert_css from '../assets/certificates/cert_css.jpg';
@@ -16,68 +27,132 @@ import cert_node_js from '../assets/certificates/cert_node_js.png';
 import cert_helsinki_ai from '../assets/certificates/certificate_elements_of_ai.png';
 import cert_analitics from '../assets/certificates/cert_analitics.jpg';
 
+export default class Certificates extends React.Component{
+  
+  constructor(props){
+    super(props);
+    this.state = {
+        error: null,
+        isLoaded: false,
+        items: [],
+        isTitleToggleOn: false,
+        open: false,
+        selectedImage: "",
+        selectedTitle: ""
+      };
+  } 
 
-function Certificates(){
-  return(
-    <div className="bg-dark">
-      <Navbar/>
-        <div className="container">
-          <div className="row">
-            <div className="col"/>
-            <div className="col">
-              <img className="img-fluid rounded" src={cert_hackeru} alt="No img"/>
+  componentDidMount(){
+    const storage = firebase.storage();
+    const sertificatesRef = storage.ref().child('mbworks/images/');
+
+    sertificatesRef.listAll()
+    .then((res) => {
+      var data = [];
+      var allData = res.items;
+      res.items.forEach(ref => {
+        ref.getDownloadURL()
+        .then((url) => {
+          data.push({image: url, title: ref.name.split('.')[0] });
+        })
+        .catch((err) => {
+          this.setState({
+            isLoaded: true,
+            error:err
+          });
+        })
+        .finally(() => {
+          if (data.length == allData.length){
+            data.sort((p0, p1) => {
+              return p0.title.split('_')[1] - p1.title.split('_')[1] 
+            });
+            data.forEach((el) => { 
+              el.title = el.title.split('_')[0] 
+            });
+            this.setState({
+              isLoaded:true,
+              items: data
+            })
+          }
+        });
+      })
+    })
+    .catch((err) => {
+      this.setState({
+        isLoaded: true,
+        error:err
+      });
+    });
+
+  }
+
+  selectPhoto = (image) => {
+    this.showImageFullSize(image)
+   
+  }
+
+  handleClickOpen = (tile) => {
+    this.setState({ 
+      open: true,
+      selectedImage: tile.image,
+      selectedTitle: tile.title
+    });
+  }
+
+  handleClose = () => {
+    this.setState({ open: false});
+  }
+
+  showImageFullSize = () =>{
+    return <Dialog
+        open={this.state.open}
+        onClose={this.handleClose}
+        aria-labelledby="responsive-dialog-title"
+      >
+        <DialogTitle id="responsive-dialog-title">{this.state.selectedTitle}</DialogTitle>
+        <DialogContent>
+          <DialogContent>
+            <div>
+              <img className="dialog-image" src={this.state.selectedImage}/>
             </div>
-            <div className="col">
-              <img className="img-fluid rounded" src={ibm_hackaton} alt="No img"/>
-            </div>
-            <div className="col">
-              <img className="img-fluid rounded" src={cert_hg_schoole} alt="No img"/>
-            </div>
-            <div className="col"/>
+          </DialogContent>
+        </DialogContent>
+        <DialogActions>
+          <Button autoFocus onClick={this.handleClose}>
+            Cancel
+          </Button>
+        </DialogActions>
+      </Dialog>
+  }
+
+  render() {
+    const { error, isLoaded, items } = this.state;
+
+    if (error) {
+      return <div>Error: {error.message}</div>;
+    } else if (!isLoaded) {
+      return <div>Loading...</div>;
+    } else {
+        return(
+          <div className="bg-dark">
+            <Navbar/>
+              <div className="container">
+                <div className="bg-dark root">
+                  <GridList cols={3} cellHeight={180} className="gridList">
+                    {items.map((tile) => (
+                      <GridListTile key={tile.image} onClick={ () => this.handleClickOpen(tile)}>
+                        <img className="image-cert" src={tile.image} alt={tile.title} />
+                        <GridListTileBar subtitle={tile.title}/>
+                      </GridListTile>
+                    ))}
+                  </GridList>
+                </div>
+              </div>
+              {this.showImageFullSize()}
+            <Footer/>
           </div>
-          <div className="row">
-            <div className="col"/>
-            <div className="col">
-              <img className="img-fluid rounded" src={cert_helsinki_ai} alt="No img"/>
-            </div>
-            <div className="col">
-              <img className="img-fluid rounded" src={cert_node_js} alt="No img"/>
-            </div>
-            <div className="col">
-              <img className="img-fluid rounded" src={cert_analitics} alt="No img"/>
-            </div>
-            <div className="col"/>
-          </div>
-          <div className="row">
-            <div className="col"/>
-            <div className="col">
-              <img className="img-fluid rounded" role="presentation" src={cert_html} alt="No img"/>
-            </div>
-            <div className="col">
-              <img className="img-fluid rounded" src={cert_css} alt="No img"/>
-            </div>
-            <div className="col">
-              <img className="img-fluid rounded" src={cert_js} alt="No img"/>
-            </div>
-            <div className="col"/>
-          </div>
-          <div className="row">
-            <div className="col"/>
-            <div className="col">
-              <img className="img-fluid rounded" src={cert_java} alt="No img"/>
-            </div>
-            <div className="col">
-              <img className="img-fluid rounded" src={cert_sql} alt="No img"/>
-            </div>
-            <div className="col">
-              <img className="img-fluid rounded" src={cert_jquery} alt="No img"/>
-            </div>
-            <div className="col"/>
-          </div>
-        </div>
-      <Footer/>
-    </div>
-  );
+        );
+    }
+  }
+
 }
-
-export default Certificates;

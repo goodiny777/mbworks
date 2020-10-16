@@ -5,7 +5,7 @@ import Navbar from '../components/Navbar.jsx';
 import Footer from '../components/Footer.jsx';
 import BlogListItem from '../components/BlogListItem.jsx';
 
-class Blog extends React.Component{
+export default class Blog extends React.Component{
     constructor(props){
         super(props);
         this.state = {
@@ -73,5 +73,3 @@ function compare(a, b) {
   }
   return comparison;
 }
-
-export default Blog;
