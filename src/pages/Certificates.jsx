@@ -10,22 +10,7 @@ import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
-
-import cert_html from '../assets/certificates/cert_html.jpg';
-import cert_css from '../assets/certificates/cert_css.jpg';
-import cert_js from '../assets/certificates/cert_js.jpg';
-import cert_java from '../assets/certificates/cert_java.jpg';
-import cert_sql from '../assets/certificates/cert_sql.jpg';
-import cert_jquery from '../assets/certificates/cert_jquery.jpg';
-import cert_hg_schoole from '../assets/certificates/highschool.jpg';
-import cert_hackeru from '../assets/certificates/cert_hackeru.jpg';
-import ibm_hackaton from '../assets/certificates/ibm_hackaton.jpeg';
-import cert_node_js from '../assets/certificates/cert_node_js.png';
-import cert_helsinki_ai from '../assets/certificates/certificate_elements_of_ai.png';
-import cert_analitics from '../assets/certificates/cert_analitics.jpg';
 
 export default class Certificates extends React.Component{
   
