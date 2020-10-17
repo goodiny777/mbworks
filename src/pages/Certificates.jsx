@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import "./Certificates.css";
 import firebase from '../Firebase';
 import Navbar from '../components/Navbar.jsx';
@@ -23,16 +23,17 @@ export default class Certificates extends React.Component{
         isTitleToggleOn: false,
         open: false,
         selectedImage: "",
-        selectedTitle: ""
+        selectedTitle: "",
+        windowWidth: null
       };
   } 
 
   componentDidMount(){
     const storage = firebase.storage();
     const sertificatesRef = storage.ref().child('mbworks/images/');
-
+    window.addEventListener('resize', ()=>{this.handleResize(this)});
     sertificatesRef.listAll()
-    .then((res) => {
+      .then((res) => {
       var data = [];
       var allData = res.items;
       res.items.forEach(ref => {
@@ -47,7 +48,7 @@ export default class Certificates extends React.Component{
           });
         })
         .finally(() => {
-          if (data.length == allData.length){
+          if (data.length === allData.length){
             data.sort((p0, p1) => {
               return p0.title.split('_')[1] - p1.title.split('_')[1] 
             });
@@ -68,12 +69,15 @@ export default class Certificates extends React.Component{
         error:err
       });
     });
-
   }
 
-  selectPhoto = (image) => {
-    this.showImageFullSize(image)
-   
+  handleResize(weakThis){
+    console.log(weakThis);
+    if(weakThis.state.windowWidth != window.innerWidth){
+      weakThis.setState({
+        windowWidth: window.innerWidth
+      });
+    }
   }
 
   handleClickOpen = (tile) => {
@@ -98,7 +102,7 @@ export default class Certificates extends React.Component{
         <DialogContent>
           <DialogContent>
             <div>
-              <img className="dialog-image" src={this.state.selectedImage}/>
+              <img className="dialog-image" alt={this.state.selectedTitle} src={this.state.selectedImage}/>
             </div>
           </DialogContent>
         </DialogContent>
@@ -123,7 +127,7 @@ export default class Certificates extends React.Component{
             <Navbar/>
               <div className="container">
                 <div className="bg-dark root">
-                  <GridList cols={3} cellHeight={180} className="gridList">
+                  <GridList cols={this.state.windowWidth < 500 ? 2: 3} cellHeight={180} className="gridList">
                     {items.map((tile) => (
                       <GridListTile key={tile.image} onClick={ () => this.handleClickOpen(tile)}>
                         <img className="image-cert" src={tile.image} alt={tile.title} />
@@ -139,5 +143,4 @@ export default class Certificates extends React.Component{
         );
     }
   }
-
 }
