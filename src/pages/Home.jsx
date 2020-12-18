@@ -31,7 +31,9 @@ function Home() {
           that I can.
         </p>
         <p className="color-white">
-          From August 2019 till today I work at <a href="https://www.bigapps.co.il/">Bigapps Interactive</a> as Mobile developer and take part in developing Android and iOS native apps.
+          From August 2019 I work at <a href="https://www.bigapps.co.il/">Bigapps Interactive</a> as Mobile developer and take part in developing Android and iOS native apps.
+          <br/>
+          From October 2020 I became leading Android developer of Bigapps. I received new responsabilities such as mentoring new employes and more.
           <br/>
           Also I took part in developing crosplatform app with Native Script and Angular 2.
         </p>

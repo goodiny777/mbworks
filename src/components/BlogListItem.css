@@ -4,18 +4,23 @@ li{
 
 .leftCol{
     margin-top: 2%;
-    margin-right: 5%;
+    margin-right: 20%;
+    margin-left: -30pt;
     font-size: 1.4em;
+    border-radius: 0px 10px 50px 0px;
     background-color: aliceblue;
     text-align: left;
+    padding-left: 30px;
 }
 
 .rightCol{
     margin-top: 2%;
-    margin-left: 15%;
+    margin-left: 20%;
     font-size: 1.4em;
+    border-radius: 10px 0px 0px 50px;
     background-color: bisque;
     text-align: right;
+    padding-right: 30px;
 }
 
 .blogItemTitle{

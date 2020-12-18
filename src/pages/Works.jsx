@@ -12,20 +12,20 @@ function Works(){
       <Navbar/>
       <div className="container rounded bg-light">
           <div className="row container">
-              <div className="col container">
-                <img src={weekupLogo} alt="weekup_logo" width="100" heigh="100"/>
-              </div>
-              <div className="col container">
-                <h5>
-                  <a href="https://play.google.com/store/apps/details?id=com.weekup">WeekUp</a>
-                </h5>
-              </div>
-              <div className="row container">
-                <p>
-                Weekup I made as freelancer.<br/>
-                In this project I managed all the tecnology side.<br/>
-                From choosing data base and libraries to rulling worktime and supplying th customer with techncal advices.
-                </p>
+            <div className="col container">
+              <h5>
+                <a href="https://play.google.com/store/apps/details?id=com.weekup">WeekUp</a>
+              </h5>
+            </div>
+            <div className="col container">
+              <img src={weekupLogo} alt="weekup_logo" width="100" heigh="100"/>
+            </div>
+            <div className="row container">
+              <p>
+              Weekup I made as freelancer.<br/>
+              In this project I managed all the tecnology side.<br/>
+              From choosing data base and libraries to rulling worktime and supplying th customer with techncal advices.
+              </p>
             </div>
           </div>
       </div>
@@ -33,12 +33,12 @@ function Works(){
         <div className="container rounded bg-light">
           <div className="row container">
             <div className="col container">
-                <img src={karmaLogo} alt="karma_logo" width="100" heigh="100"/>
-            </div>
-            <div className="col container">
               <h5>
                 <a href="https://play.google.com/store/apps/details?id=tk.mbworks.www.karma">Karma</a>
               </h5>
+            </div>
+            <div className="col container">
+                <img src={karmaLogo} alt="karma_logo" width="100" heigh="100"/>
             </div>
             <div className="row container">
               <p>
@@ -54,12 +54,12 @@ function Works(){
         <div className="container rounded bg-light">
           <div className="row container">
               <div className="col container">
-              <img src={spaDreamLogo} alt="spa_dream" width="100" heigh="100"/>
-              </div>
-              <div className="col container">
                 <h5>
                   <a href="https://play.google.com/store/apps/details?id=il.co.spadream.spadream">SpaDream</a>
                 </h5>
+              </div>
+              <div className="col container">
+                <img src={spaDreamLogo} alt="spa_dream" width="100" heigh="100"/>
               </div>
               <div className="row container">
                 <p>
@@ -68,9 +68,8 @@ function Works(){
                 Also it is good stategy to put your buisness page or app to be always in eyes of customers. 
                 </p>
               </div>
-            </div>
           </div>
-
+        </div>
     <Footer/>
     </div>
   );
